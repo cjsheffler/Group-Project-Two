@@ -1,32 +1,38 @@
+DROP TABLE IF EXISTS omdb;
+DROP TABLE IF EXISTS netflix;
+DROP TABLE IF EXISTS tmdb;
 -- create omdb table
 CREATE TABLE omdb(    
-title TEXT,
-genre TEXT,
-language TEXT,
-awards TEXT,
-production TEXT,
-id TEXT PRIMARY KEY
+title VARCHAR,
+omdb_genre VARCHAR,
+language VARCHAR,
+awards VARCHAR,
+production VARCHAR,
+imdbrating FLOAT,
+metascore INT,
+boxoffice VARCHAR,
+imdbid VARCHAR 
 );
 
 -- create netflix table
 CREATE TABLE netflix(
 id INT PRIMARY KEY,   
-title TEXT,
-director TEXT,
-cast TEXT,
+title VARCHAR,
+director VARCHAR,
+cast_members VARCHAR,
 year_released INT,
-rating TEXT,
-duration TEXT,
-genre TEXT,
-description TEXT
+rating VARCHAR,
+duration VARCHAR,
+netflix_genre VARCHAR,
+description VARCHAR
 );
 
 -- create the Movie DB table
 CREATE TABLE tmdb(  
-title TEXT,
-original_title TEXT,
-popularity TEXT,
-vote_count TEXT,
-vote_average TEXT,
-poster_path TEXT
+title VARCHAR,
+original_title VARCHAR,
+popularity FLOAT,
+vote_count INT,
+vote_average FLOAT,
+poster_path VARCHAR
 );
